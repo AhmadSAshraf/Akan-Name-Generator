@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <title>Akan Name Generator</title>
-      <link href="css/styles.css">
-      <script src="js/script.js"></script>
+    <title>Akan Name Generator</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-      <h1>Welcome to the Akan name generator!!</h1>
-  </body>
+    <h1>Welcome to the Akan name generator!!</h1>
     <div id="box">
-        <h3>Enter your name and birthday to get your Akan name.</h3>
+      <h3>Enter your name and birthday to get your Akan name.</h3>
     </div>
     <form>
-    Date of Birth:<input type="date" id="dob" name="dob" value="" >
-    
-    Your Gender: <input type="radio" name="gender" value="Male"> Male
-                 <input type="radio" name="gender" value="Female"> Female
-    <input type="button" name="SubmitButton" value="Submit" onclick=namefinder() class="button">
-    <input type="reset" value="Reset">
+      Date of Birth:<input type="date" id="dob" name="dob" value="" />
+      <div id="gender">
+        Your Gender:
+        <input type="radio" id="male" name="gender" value="male" /> Male
+        <input type="radio" id="female" name="gender" value="female" /> Female
+      </div>
+      <input
+        class="button"
+        type="button"
+        name="SubmitButton"
+        value="Submit"
+        onClick="namefinder(this.form)"
+      />
+      <input class="button" type="reset" value="Reset" />
     </form>
-    
-    <p id="space"> Your Akan name is:<span id="output"></span> </p>
-    
-    
-    </body>
-    
-    </html>
 
-</body>
+    <p id="space">Your Akan name is: <span id="output"></span></p>
+    <script src="js/script.js"></script>
+  </body>
 </html>
-    
