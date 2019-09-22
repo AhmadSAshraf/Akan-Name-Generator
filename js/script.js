@@ -14,4 +14,31 @@ function namefinder() {
   } else {
     alert("Invalid date");
   }
+  /* Akan male names list */
+  var male = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
+  /* Akan female names list */
+  var female = ["Akosu", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+
+  /* Akan female names list */
+  if (document.getElementById("female").checked) {
+    /* Assigning the gender value female */
+    gender = document.getElementById("female").value;
+    /* Assigning the name based on day of the week born  */
+    document.getElementById("output").innerHTML = female[weekday];
+  }
+  /* Akan female names list */
+  if (document.getElementById("male").checked) {
+    /* Assigning the gender value male */
+    gender = document.getElementById("male").value;
+    /* Assigning the name based on day of the week born  */
+    document.getElementById("output").innerHTML = male[weekday];
+  }
+  /* Checkbox input validation */
+  if (
+    document.getElementById("male").checked == false &&
+    document.getElementById("female").checked == false
+  ) {
+    alert("Kindly choose your gender");
+    return false;
+  }
 }
